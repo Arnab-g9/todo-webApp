@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(47, 46, 46);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 10px;
+}
+.navbar{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 70px;
+    background: transparent;
+    justify-content: left;
+}
+.navbar .nav-element-container .nav-item{
+    display: inline-block;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.navbar ul li img{
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(221, 221, 221);
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.date-Container{
+    background: radial-gradient(rgb(93, 224, 93), white 80%);
+    width: 300px;
+    text-align: center;
+    margin: 50px auto 0;
+    padding: 15px 0;
+    color: black;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.date-Container .work-list{
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.date-Container .date-time{
+    width: 30px;
+    vertical-align: middle;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 3;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 17px;
+}
+button{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 0;
+    color: rgb(255, 255, 255);
+    background: radial-gradient(rgb(16, 167, 255) 10%, white);
+    font-size: 16px;
+    /* font-weight: 600; */
+    cursor: pointer;
+    border-radius: 70px;
+    transition: opacity 0.25s;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.3;
+}
+
+#list-container li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgb(255, 132, 16);
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background: radial-gradient(rgb(251, 228, 179), white 80%);
+}
+#list-container .checked{
+    background: radial-gradient(rgb(208, 255, 208), white 80%);
+}
+ 
+#list-container li::before{
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url('/images/radio-button.png');
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ ul .checked{
+    color: #6d6d6d;
+    text-decoration: line-through;
+}
+
+#list-container .checked::before{
+    background-image: url('/images/check-mark.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 7px;
+    font-size: 28px;
+    color: #555;
+    height: 30px;
+    width: 30px;
+    right: 10px;
+    /* line-height: 40px; */
+    text-align: center;
+    border-radius: 50%;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+ul li span:hover{
+    background-color: red;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    input{
+        flex: 2;
+        border: none;
+        outline: none;
+        width: 150px;
+        background: transparent;
+        padding: 10px;
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo web app</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="navbar">
+            <ul class="nav-element-container">
+                <li class="nav-item"><img src="images/calender.png" alt=""><a href="/today">Today</a></li>
+                <li class="nav-item"><img src="images/todolist.png" alt=""><a href="/work">Work</a></li>
+            </ul>
+        </div>
+
+        <div class="date-Container">
+            <% if(locals.urlName == "/work") {%>
+               <%  if(locals.message) { %>
+                <%= message %> <img class="work-list" src="images/leaf.png" alt="">
+                <% } %>
+                <% } %>
+
+                <% if(locals.urlName == "/today") {%>
+                    <%  if(locals.time) { %>
+                        <img class="date-time" src="images/calender.png" alt=""> <%= time %> 
+                     <% } %>
+                     <% } %>
+
+                     <% if(locals.urlName == "/") {%>
+                        <%  if(locals.time) { %>
+                            <img class="date-time" src="images/calender.png" alt=""> <%= time %> 
+                         <% } %>
+                         <% } %>
+        </div>
+
+        <div class="todo-app">
+            <h2>Task-List <img src="images/todo.png" alt=""></h2>
+            <div class="row">
+                <input type="text"  id="input-box" placeholder="Add your task 🤗">
+                <button class="btn" onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">task1</li>
+                <li>task2</li>
+                <li>task3</li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
